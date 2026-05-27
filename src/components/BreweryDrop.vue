@@ -175,8 +175,10 @@
         import 'firebase/firestore';
 
         // firebase init goes here
+        const apiKey = process.env.VUE_APP_GOOGLE_API_KEY;
+
         const config = {
-            apiKey: "",
+            apiKey: apiKey,
             authDomain: "pint-guide-vue-app.firebaseapp.com",
             databaseURL: "https://pint-guide-vue-app.firebaseio.com",
             projectId: "pint-guide-vue-app",
