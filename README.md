@@ -27,3 +27,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Local development
+
+This older Vue CLI project requires Node 16.
+
+```bash
+nvm use 16
+npm install
+npm run serve

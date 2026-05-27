@@ -176,7 +176,7 @@
 
         // firebase init goes here
         const config = {
-            apiKey: "AIzaSyA33rRQ3rlgUatJpEGBwI8ncTA9nwTnYI8",
+            apiKey: "",
             authDomain: "pint-guide-vue-app.firebaseapp.com",
             databaseURL: "https://pint-guide-vue-app.firebaseio.com",
             projectId: "pint-guide-vue-app",
