@@ -13,7 +13,6 @@ export default new Router({
       meta: { 
         title: 'St. Pete Pint Guide | A complete guide to the breweries of St. Petersburg Florida.', 
         description: 'A complete guide to the breweries of St. Petersburg Florida.',
-
       } 
     }
   ]  

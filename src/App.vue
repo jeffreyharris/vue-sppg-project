@@ -13,8 +13,8 @@
             </a>
             <h1>A comprehensive guide to the craft breweries of Sunshine City</h1>
         </div>
+      </div>
     </div>
-  </div>
        
    
 
@@ -31,7 +31,7 @@
                 </a>
 
                 <p>
-                    &copy; 2020 St Pete Pint Guide
+                    &copy; 2026 St Pete Pint Guide
                 </p>
                 <p>
                     All product names, trademarks and registered trademarks are property of their respective owners.
