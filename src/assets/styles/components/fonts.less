@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'double_porter_1';
+    src: url('/fonts/double_porter_1-webfont.woff2') format('woff2'), url('/fonts/double_porter_1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'double_porter_2';
+    src: url('/fonts/double_porter_2-webfont.woff2') format('woff2'), url('/fonts/double_porter_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'double_porter_5';
+    src: url('/fonts/double_porter_5-webfont.woff2') format('woff2'), url('/fonts/double_porter_5-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'double_porter_6';
+    src: url('/fonts/double_porter_6-webfont.woff2') format('woff2'), url('/fonts/double_porter_6-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'double_porter_3';
+    src: url('/fonts/double_porter_3-webfont.woff2') format('woff2'), url('/fonts/double_porter_3-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'double_porter_p_5';
+    src: url('/fonts/double_porter_p_5-webfont.woff2') format('woff2'), url('/fonts/double_porter_p_5-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@brown: #904830;
+@darkBrown: #783030;
+@paleAle: #F49F44;
+@ale: #FF8400;
+@lightBlue: #71D9FF;
+@darkerBlue: #2C8FB2;
+@lightBrown: #A86048;
+@redBrown: #903030;
+
+
+body {
+    background: url('/img/bg/dust_scratches.png');
+    margin: 0;
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        font-family: 'double_porter_3';
+        color: #d2482e;
+        display: block;
+        font-size: 36px;
+        line-height: 33px;
+        margin-bottom: 8px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .logo h1{
+        font-size: 16px;
+        line-height: 16px;
+        margin: 20px 10px 10px 10px;
+
+    }
+    h2 {
+        color: #fff;
+        font-family: 'double_porter_1';
+        font-size: 36px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+
+    h3 {     
+        color: @darkBrown;
+        display: block;
+        font-family: 'double_porter_p_5';
+        font-size: 38px;
+        line-height: 1;  
+        margin-top: 20px; 
+        text-align: center;
+
+        &.subhead {
+            border-top: 1px solid @darkBrown;
+            font-size: 38px;
+            line-height: 40px;
+            padding-top: 10px;
+            margin: 10px 30px 18px 30px;
+        }
+    }
+
+    h5 {     
+        color: @darkBrown;
+        display: block;
+        font-family: 'double_porter_p_5';
+        font-size: 42px;
+        line-height: 1;  
+        margin-top: 20px; 
+        text-align: center;
+
+        &.subhead {
+            border-top: 1px solid @darkBrown;
+            font-size: 38px;
+            line-height: 40px;
+            margin: 10px 30px 18px 30px;
+        }
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .head-line {
+        border-bottom: 1px solid @darkerBlue;
+        border-top: 1px solid @darkerBlue;
+        height: 5px;
+        margin-top: 3px;
+        width: 100%;
+
+        &.bottom {
+            margin-top: 40px;
+        }
+    }
+
+    #reactions .text-bold{  
+        font-family: 'double_porter_3' !important;
+        font-size: 48px;
+        line-height: 1;
+    }
+
+    .font-load {
+        font-family: 'double_porter_5';
+        display: none;
+    }
+
+    .btn-default {
+        background-color: @paleAle;
+        background-image: url('/img/bubbles.png');
+        border-color: @brown;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: right 60px;
+        color: white;
+        font-family: 'double_porter_p_5';
+        font-size: 32px;
+        margin-top: 20px;
+        padding: 10px 30px;
+        position: relative;
+        -moz-transition: background-position 1.5s ease-in;
+        -o-transition: background-position 1.5s ease-in;
+        -webkit-transition: background-position 1.5s ease-in;
+        width: fit-content;
+
+        &:hover {
+            background-color: @paleAle;
+            background-position: right -50px;
+            border-color: @brown;
+            color: white;
+            //font-family: 'double_porter_5', 'double_porter_p_5';
+        }
+    }
+
+    .pills {
+        background-color: @darkBrown;
+        border-radius: 5px;
+        color: #fff;
+        display: inline-block;
+        font-family: 'double_porter_p_5';
+        font-size: 32px;
+        margin: 5px;
+        padding: 10px 30px;
+        position: relative;
+    }
+    
+    //IFRAMES
+    .iframe-container {
+        overflow: hidden;
+        min-height: 450px;
+        padding-top: 56.25%;
+        position: relative;
+    }
+
+    .iframe-container iframe {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    //DISQUS THREAD
+    #disqus_thread {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    //SOCIAL FEEDS
+    .twitter-timeline, .fb-page {
+        display: block !important;
+        margin: 10px auto 10px auto !important;
+        max-width: 500px !important;
+    }
+}
+
+
+@media screen and (min-width:575px) {
+    body {
+        
+        h3 {
+            font-size: 68px;
+            text-align: left;
+            border-top: none;
+            margin: 10px 30px 18px 30px;
+            &.subhead{text-align:center;}
+            
+        }
+    }
+}
+

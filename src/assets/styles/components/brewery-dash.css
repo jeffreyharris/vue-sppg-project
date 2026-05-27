@@ -1,0 +1,681 @@
+@font-face {
+  font-family: 'double_porter_1';
+  src: url('/fonts/double_porter_1-webfont.woff2') format('woff2'), url('/fonts/double_porter_1-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_2';
+  src: url('/fonts/double_porter_2-webfont.woff2') format('woff2'), url('/fonts/double_porter_2-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_5';
+  src: url('/fonts/double_porter_5-webfont.woff2') format('woff2'), url('/fonts/double_porter_5-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_6';
+  src: url('/fonts/double_porter_6-webfont.woff2') format('woff2'), url('/fonts/double_porter_6-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_3';
+  src: url('/fonts/double_porter_3-webfont.woff2') format('woff2'), url('/fonts/double_porter_3-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_p_5';
+  src: url('/fonts/double_porter_p_5-webfont.woff2') format('woff2'), url('/fonts/double_porter_p_5-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: url('/img/bg/dust_scratches.png');
+  margin: 0;
+  /* Double Diagonal line */
+}
+body img {
+  width: 100%;
+}
+body h1 {
+  font-family: 'double_porter_3';
+  color: #d2482e;
+  display: block;
+  font-size: 36px;
+  line-height: 33px;
+  margin-bottom: 8px;
+  margin-top: 35px;
+  text-align: center;
+}
+body .logo h1 {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 20px 10px 10px 10px;
+}
+body h2 {
+  color: #fff;
+  font-family: 'double_porter_1';
+  font-size: 36px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+body h3 {
+  color: #783030;
+  display: block;
+  font-family: 'double_porter_p_5';
+  font-size: 48px;
+  line-height: 1;
+  margin-top: 20px;
+  text-align: center;
+}
+body h3.subhead {
+  border-top: 1px solid #783030;
+  font-size: 38px;
+  line-height: 40px;
+  padding-top: 10px;
+  margin: 10px 30px 18px 30px;
+}
+body h5 {
+  color: #783030;
+  display: block;
+  font-family: 'double_porter_p_5';
+  font-size: 42px;
+  line-height: 1;
+  margin-top: 20px;
+  text-align: center;
+}
+body h5.subhead {
+  border-top: 1px solid #783030;
+  font-size: 38px;
+  line-height: 40px;
+  margin: 10px 30px 18px 30px;
+}
+body p {
+  margin: 10px 0;
+}
+body .text-center {
+  text-align: center;
+}
+body .head-line {
+  border-bottom: 1px solid #2C8FB2;
+  border-top: 1px solid #2C8FB2;
+  height: 5px;
+  margin-top: 3px;
+  width: 100%;
+}
+body .head-line.bottom {
+  margin-top: 40px;
+}
+body #reactions .text-bold {
+  font-family: 'double_porter_3' !important;
+  font-size: 48px;
+  line-height: 1;
+}
+body .font-load {
+  font-family: 'double_porter_5';
+  display: none;
+}
+body .btn-default {
+  background-color: #F49F44;
+  background-image: url('/img/bubbles.png');
+  border-color: #904830;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: right 60px;
+  color: white;
+  font-family: 'double_porter_p_5';
+  font-size: 32px;
+  margin-top: 20px;
+  padding: 10px 30px;
+  position: relative;
+  -moz-transition: background-position 1.5s ease-in;
+  -o-transition: background-position 1.5s ease-in;
+  -webkit-transition: background-position 1.5s ease-in;
+  width: fit-content;
+}
+body .btn-default:hover {
+  background-color: #F49F44;
+  background-position: right -50px;
+  border-color: #904830;
+  color: white;
+}
+body .pills {
+  background-color: #783030;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-family: 'double_porter_p_5';
+  font-size: 32px;
+  margin: 5px;
+  padding: 10px 30px;
+  position: relative;
+}
+body *:after,
+body *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body .beer-list svg {
+  display: block;
+}
+body .beer-color-icon {
+  display: inline;
+  width: 40px;
+}
+body .diagonal-container {
+  overflow: hidden;
+}
+body section {
+  position: relative;
+  padding: 10em 10%;
+  background: #A86048;
+}
+body section.brewery-details-section {
+  background: url('/img/bg/dust_scratches.png');
+}
+body section::before,
+body section::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+body .ss-style-doublediagonal::before,
+body .ss-style-doublediagonal::after {
+  display: none;
+}
+body .ss-style-doublediagonal {
+  z-index: 1;
+  padding-top: 0 !important;
+  padding-bottom: 2em;
+  padding-left: 0;
+  padding-right: 0;
+  background: #F49F44;
+}
+body .ss-style-doublediagonal.second-section {
+  background-color: white;
+}
+body .ss-style-doublediagonal::before,
+body .ss-style-doublediagonal::after {
+  top: 0;
+  left: -25%;
+  z-index: -1;
+  width: 150%;
+  height: 75%;
+  background: inherit;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+body .ss-style-doublediagonal::before {
+  height: 50%;
+  background: #A86048;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+}
+body .iframe-container {
+  overflow: hidden;
+  min-height: 450px;
+  padding-top: 56.25%;
+  position: relative;
+}
+body .iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+body #disqus_thread {
+  max-width: 800px;
+  margin: 0 auto;
+}
+body .twitter-timeline,
+body .fb-page {
+  display: block !important;
+  margin: 10px auto 10px auto !important;
+  max-width: 500px !important;
+}
+@media screen and (min-width: 575px) {
+  body body .ss-style-doublediagonal::before,
+  body body .ss-style-doublediagonal::after {
+    display: block;
+  }
+  body body .ss-style-doublediagonal {
+    padding-top: 6em;
+  }
+  body body h3 {
+    font-size: 68px;
+    text-align: left;
+    border-top: none;
+    margin: 10px 30px 18px 30px;
+  }
+}
+.brewery-box-enter-active,
+.fade-leave-active {
+  transition: opacity 0.8s;
+}
+.brewery-box-enter,
+.brewery-box-leave-to {
+  opacity: 0;
+}
+.brewery-banner {
+  margin-bottom: 0;
+}
+.select-brewery {
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+.no-left-padding {
+  padding-left: 0 !important;
+}
+.no-right-padding {
+  padding-right: 0 !important;
+}
+.contact-us-button {
+  background-color: #903030;
+  border: 0px solid #fff;
+  border-top: 1px solid #903030;
+  border-right: 1px solid #903030;
+  border-bottom: 1px solid #903030;
+  color: #ffffff;
+  display: block;
+  font-size: 14px;
+  float: none;
+  line-height: 1;
+  margin: 0;
+  padding: 10px 15px 10px 15px;
+  width: 100%;
+}
+.all-brewery-button {
+  background-color: #903030;
+  border: 0px solid #fff;
+  border-top: 1px solid #903030;
+  border-right: 1px solid #903030;
+  border-bottom: 1px solid #903030;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 19px;
+  line-height: 18px;
+  margin: 10px 0;
+  border-radius: 0px 5px 5px 0px;
+  padding: 8px 8px 10px 8px;
+  width: 40%;
+}
+.all-brewery-button:disabled {
+  background-color: #F5BD41;
+  color: #F5D388;
+}
+.all-brewery-button:focus,
+.all-brewery-button:active {
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 20px #550808;
+  outline: 0;
+}
+.brewery-select {
+  border-radius: 5px 0px 0px 5px !important;
+  margin: 10px 0 10px 0 !important;
+  display: inline !important;
+  color: #A86048 !important;
+  cursor: pointer;
+  width: 60% !important;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+.brewery-summary {
+  margin: 2em 0;
+  padding: 0px;
+}
+.brewery-summary h2 {
+  background-color: #903030;
+}
+.brewery-summary .summary {
+  border: 1px solid #903030;
+  background-color: white;
+  font-family: 'double_porter_3';
+  color: #2C8FB2;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 10px;
+  text-align: left;
+}
+.brewery-summary .summary .brewery {
+  color: #2C8FB2;
+  margin: 10px 0 0;
+}
+.brewery-summary .summary .addy {
+  color: #903030;
+  margin: 0 0 10px 0;
+}
+.brewery-summary .summary .brewery,
+.brewery-summary .summary .addy {
+  display: block;
+  text-align: center;
+}
+.brewery-summary .summary .brewery-label {
+  border: 1px solid #903030;
+  border-radius: 50px;
+  float: left;
+  display: block;
+  max-width: 100px;
+  margin: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+.brewery-summary .summary .social-links {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.brewery-summary .summary .social-links .cls-1 {
+  fill: #783030;
+}
+.brewery-summary .summary .social-links a {
+  margin: 0 5px;
+}
+.brewery-summary .summary .social-links a .cls-1 {
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+.brewery-summary .summary .social-links a:hover {
+  text-decoration: none;
+}
+.brewery-summary .summary .social-links a:hover .cls-1 {
+  fill: #2C8FB2;
+}
+.brewery-summary .summary .featured-map.hidden-map {
+  background-color: darkgrey;
+  display: block;
+  height: 277px;
+  width: 100%;
+}
+.gallery {
+  border-bottom: 1px solid #783030;
+  border-top: 1px solid #783030;
+  padding: 10px 0 5px 0;
+}
+.gallery-section {
+  background: transparent;
+  padding: 0;
+}
+.brewery {
+  margin-bottom: 60px;
+}
+.brewery .card {
+  background-color: white;
+  border-radius: 5px;
+  display: block;
+  margin: 60px 0 0px 0;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+.brewery .card .icon {
+  background-color: white;
+  border-radius: 50px;
+  position: absolute;
+  top: -57px;
+  left: 34%;
+  overflow: hidden;
+  display: block;
+  width: 100px;
+  z-index: 1000;
+  margin: 10px auto;
+}
+.brewery .card .card-banner {
+  background-size: 100% !important;
+  border-radius: 5px;
+  height: 160px;
+  padding: 0;
+  position: relative;
+  transition: background-size 1s;
+}
+.brewery .card .card-banner .shade {
+  background-color: black;
+  border-radius: 5px;
+  display: block;
+  height: 100%;
+  opacity: 0.6;
+  position: absolute;
+  transition: opacity 1s;
+  width: 100%;
+}
+.brewery .card .card-banner .title {
+  color: #fff;
+  display: block;
+  font-family: double_porter_3;
+  font-size: 24px;
+  /* left: 135px; */
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+  top: 75px;
+  /* margin-top: 48px; */
+  z-index: 1001;
+}
+.brewery .card .card-banner .title .sub-title {
+  color: #d2482e;
+  display: block;
+  font-size: 20px;
+  line-height: 22px;
+  z-index: 1001;
+}
+.brewery .card .card-banner .title .sub-title.addy {
+  margin-top: 0px;
+}
+.brewery .card .card-banner:hover {
+  background-size: 101% !important;
+}
+.brewery .card .card-banner:hover .shade {
+  opacity: 0.2;
+}
+.brewery .card .card-body {
+  padding: 20px 20px 20px 20px;
+  position: relative;
+}
+.brewery .card .card-body .description {
+  display: none;
+  font-size: 14px;
+}
+.brewery .card .card-body .link {
+  color: blue;
+  text-decoration: underline;
+}
+.brewery .card .card-body .see-more {
+  white-space: nowrap;
+}
+.brewery .card .view {
+  color: white;
+  float: left;
+  font-family: 'double_porter_3';
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+  width: 33.33333333%;
+}
+.brewery .card .view.beers {
+  background-color: #2C8FB2;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+}
+.brewery .card .view.beers:hover {
+  color: #71D9FF;
+}
+.brewery .card .view.map {
+  background-color: #FF8400;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+}
+.brewery .card .view.map:hover {
+  color: #903030;
+}
+.brewery .card .view.profile {
+  background-color: #A86048;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+}
+.brewery .card .view.profile:hover {
+  color: #903030;
+}
+.brewery .card.beer {
+  min-height: 305px;
+}
+.brewery .card.beer .card-title {
+  padding: 20px 20px 10px 20px;
+}
+.brewery .card.beer .card-title .title {
+  color: #f18e29;
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+.brewery .card.beer .card-title .sub-title {
+  color: #d2482e;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+@media screen and (min-width: 769px) {
+  .contact-us-button {
+    background-color: #903030;
+    border: 0px solid #fff;
+    border-top: 1px solid #903030;
+    border-right: 1px solid #903030;
+    border-bottom: 1px solid #903030;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 16px;
+    float: right;
+    line-height: 18px;
+    margin: 0 10px 0 0;
+    border-radius: 0px 0px 5px 5px;
+    padding: 8px 20px 10px 20px;
+    width: 200px;
+  }
+  .contact-us-button:hover,
+  .contact-us-button:active {
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 20px #550808;
+    outline: 0;
+  }
+  .select-brewery {
+    margin-top: 38px;
+    text-align: right;
+  }
+  .all-brewery-button {
+    margin: 30px 0;
+  }
+  .brewery-select {
+    margin: 30px auto;
+  }
+  .brewery .card .card-banner .title {
+    color: #fff;
+    display: block;
+    font-family: 'double_porter_3';
+    font-size: 24px;
+    left: 135px;
+    line-height: 24px;
+    position: absolute;
+    text-align: left;
+    top: 45px;
+    z-index: 1001;
+  }
+  .brewery .card .icon {
+    background-color: white;
+    border-radius: 50px;
+    left: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    z-index: 1000;
+  }
+  .brewery .card .card-banner .title .sub-title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .brewery-summary {
+    margin: 25px 0 125px 0;
+  }
+  .brewery-banner {
+    margin-bottom: 40px;
+  }
+  .brewery-summary {
+    margin: 2em 15px;
+  }
+  .gallery {
+    margin: 20px 0 120px 0;
+    display: block;
+  }
+  .gallery-head {
+    margin-top: 40px;
+  }
+}
+.nav-tabs .nav-link {
+  background-color: #783030 !important;
+  border-top: 1px solid white !important;
+  border-left: 1px solid white !important;
+  border-right: 1px solid white !important;
+  border-top-left-radius: 10px!important;
+  border-top-right-radius: 10px!important;
+  padding: 20px 15px;
+}
+.nav-tabs .nav-link.active {
+  background-color: #fff !important;
+  border-top: 1px solid #783030 !important;
+  border-right: 1px solid #783030 !important;
+  border-left: 1px solid #783030 !important;
+}
+.tab-content {
+  padding-top: 40px;
+}
+.nav-tabs {
+  border-bottom: none!important;
+  background: url('/img/bg/dust_scratches.png');
+}
+.nav-tabs .nav-item {
+  width: 50%;
+}
+.tab-h3 {
+  margin: 0;
+  color: white!important;
+}
+.nav-tabs .nav-link {
+  border: none;
+}
+.nav-item .active .tab-h3 {
+  color: #783030 !important;
+}
+.nav-tabs .nav-link:hover {
+  border-top: 1px solid white !important;
+  border-left: 1px solid white !important;
+  border-right: 1px solid white !important;
+}
+.nav-tabs .nav-link.active {
+  margin-top: -20px;
+  padding-bottom: 30px;
+  border-bottom: none;
+  padding-top: 30px;
+  background-color: #f49f44 !important;
+}
+.nav-tabs .nav-link.active:hover {
+  border-top: 1px solid #783030 !important;
+  border-right: 1px solid #783030 !important;
+  border-left: 1px solid #783030 !important;
+}

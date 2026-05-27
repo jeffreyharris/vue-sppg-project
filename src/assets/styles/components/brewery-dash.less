@@ -1,0 +1,515 @@
+@import 'fonts.less';
+
+.brewery-box-enter-active, .fade-leave-active {
+    transition: opacity .8s;
+}
+
+.brewery-box-enter, .brewery-box-leave-to /* .brewery-box-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.brewery-banner {
+    margin-bottom: 0;
+}
+
+.select-brewery {
+    display: block;
+    margin: 0;
+    text-align: center;
+}
+
+.no-left-padding {
+    padding-left: 0 !important;
+}
+
+.no-right-padding {
+    padding-right: 0 !important;
+}
+
+.contact-us-button {
+    background-color: #903030;
+    border: 0px solid #fff;
+    border-top: 1px solid @redBrown;
+    border-right: 1px solid @redBrown;
+    border-bottom: 1px solid @redBrown;
+    color: #ffffff;
+    display:block;
+    font-size: 14px;
+    float:none;
+    line-height: 1;
+    margin: 0;
+    padding: 10px 15px 10px 15px;
+    width:100%
+}
+
+.all-brewery-button {
+    background-color: #903030;
+    border: 0px solid #fff;
+    border-top: 1px solid @redBrown;
+    border-right: 1px solid @redBrown;
+    border-bottom: 1px solid @redBrown;
+    color: #ffffff;
+    display:inline-block;
+    font-size: 19px;
+    line-height: 18px;
+    margin: 10px 0;
+    border-radius: 0px 5px 5px 0px;
+    padding: 8px 8px 10px 8px;
+    width: 40%;
+    &:disabled{
+        background-color: #F5BD41;
+        color: #F5D388;
+    }
+    &:focus, &:active {
+        -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+        -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+        box-shadow: inset 0px 0px 20px #550808;
+        outline: 0;
+    }
+}
+
+.brewery-select {
+    border-radius: 5px 0px 0px 5px !important;
+    margin: 10px 0 10px 0 !important;
+    display:inline !important;
+    color: #A86048 !important;
+    cursor: pointer;
+    width:60% !important;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+
+//BREWERY SUMMARY
+.brewery-summary {
+    margin: 2em 0;
+    padding: 0px;
+
+    h2 {
+        background-color: @redBrown;
+    }
+
+    .summary {
+        border: 1px solid @redBrown;
+        background-color: white;
+        font-family: 'double_porter_3';
+        color: @darkerBlue;
+        display: block;
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 10px;
+        text-align: left;
+
+        .brewery {
+            color: @darkerBlue;
+            margin: 10px 0 0;
+        }
+
+        .addy {
+            color: @redBrown;
+            margin: 0 0 10px 0;
+        }
+
+        .brewery, .addy {
+            display: block;
+            text-align: center;
+        }
+
+        .brewery-label {
+            border: 1px solid @redBrown;
+            border-radius: 50px;
+            float: left;
+            display: block;
+            max-width: 100px;
+            margin: 10px 10px 10px 10px;
+            overflow: hidden;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-bottom: 10px;
+
+            .cls-1 {
+                fill: @darkBrown;
+            }
+
+            a {
+                margin: 0 5px;
+
+                .cls-1 {
+                    -moz-transition: all .2s ease-in;
+                    -o-transition: all .2s ease-in;
+                    -webkit-transition: all .2s ease-in;
+                }
+
+                &:hover {
+                    text-decoration: none;
+
+                    .cls-1 {
+                        fill: @darkerBlue;
+                    }
+                }
+            }
+        }
+
+        .featured-map {
+            &.hidden-map {
+                background-color: darkgrey;
+                display: block;
+                height: 277px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.gallery{
+    border-bottom: 1px solid #783030;
+    border-top: 1px solid #783030;
+    padding:10px 0 5px 0;
+}
+
+.gallery-section{
+    background:transparent;
+    padding:0;
+}
+
+.nav-tabs .nav-link {
+    background-color: #783030!important;
+    border-top:1px solid white !important;
+    border-left:1px solid white !important;
+    border-right:1px solid white !important;
+    border-top-left-radius: 10px!important;
+    border-top-right-radius: 10px!important;
+    padding:20px 15px;
+    &.active{
+        background-color: #fff!important;
+        border-top:1px solid #783030 !important;
+        border-right:1px solid #783030 !important;
+        border-left:1px solid #783030 !important;
+    }
+}
+
+.tab-content{
+    background-color:#f49f44 ;
+    padding-top: 40px;
+} 
+
+.nav-tabs {
+    border-bottom: none!important;
+    background: url('/img/bg/dust_scratches.png');   
+}
+
+.nav-tabs .nav-item {
+    width: 50%;
+}
+
+.tab-h3{
+    margin: 0;
+    color:white!important;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+
+
+.nav-item{
+    .active{
+        .tab-h3{
+            color:#783030!important;
+        }
+    }
+}
+
+.nav-tabs .nav-link:hover {
+    border-top: 1px solid white !important;
+    border-left: 1px solid white !important;
+    border-right: 1px solid white !important;
+}
+
+.nav-tabs .nav-link.active {
+    margin-top: -20px;
+    padding-bottom: 30px;
+    border-bottom: none;
+    padding-top: 30px;
+    background-color: #f49f44 !important;
+    &:hover{
+        border-top:1px solid #783030 !important;
+        border-right:1px solid #783030 !important;
+        border-left:1px solid #783030 !important;
+    }
+}
+
+.brewery {
+    margin-bottom: 60px;
+
+    .card {
+        background-color: white;
+        border-radius: 5px;
+        display: block;
+        margin: 60px 0 0px 0;
+        position: relative;
+        cursor:pointer;
+        width: 100%;
+
+        .icon {
+            background-color:white;
+            border-radius: 50px; 
+            position: absolute;
+            top: -57px;
+            left: 34%;
+            overflow: hidden;
+            display: block;
+            width: 100px;
+            z-index: 1000;
+            margin: 10px auto;     
+        }
+
+        .card-banner {
+            background-size: 100% !important;
+            border-radius: 5px;
+            height: 160px;
+            padding: 0;
+            position: relative;
+            transition: background-size 1s;
+
+            .shade {
+                background-color: black;
+                border-radius: 5px;
+                display: block;
+                height: 100%;
+                opacity: .6;
+                position: absolute;
+                transition: opacity 1s;
+                width: 100%;
+            }
+
+            .title {
+                color: #fff;
+                display: block;
+                font-family: double_porter_3;
+                font-size: 24px;
+                /* left: 135px; */
+                line-height: 24px;
+                position: relative;
+                text-align: center;
+                top: 75px;
+                /* margin-top: 48px; */
+                z-index: 1001; 
+                .sub-title {
+                    //font-family: 'double_porter_p_5';
+                    color: #d2482e;
+                    display: block;
+                    font-size: 20px;
+                    line-height: 22px;
+                    z-index: 1001;
+
+                    &.addy {
+                        margin-top: 0px;
+                    }
+                }
+            }
+
+            &:hover {
+                background-size: 101% !important;
+
+                .shade {
+                    opacity: .2;
+                }
+            }
+        }
+
+        .card-body {
+            padding: 20px 20px 20px 20px;
+            position: relative;
+
+            .description {
+                display: none;
+                font-size: 14px;
+            }
+
+            .link {
+                color: blue;
+                text-decoration: underline;
+            }
+
+            .see-more {
+                white-space: nowrap;
+            }
+        }
+
+        .view {
+            color: white;
+            float: left;
+            font-family: 'double_porter_3';
+            font-size: 16px;
+            padding: 20px;
+            text-align: center;
+            width: 33.33333333333%;
+
+            &.beers {
+                background-color: @darkerBlue;
+                -moz-transition: color .2s ease-in;
+                -o-transition: color .2s ease-in;
+                -webkit-transition: color .2s ease-in;
+
+                &:hover {
+                    color: @lightBlue;
+                }
+            }
+
+            &.map {
+                background-color: @ale;
+                -moz-transition: color .2s ease-in;
+                -o-transition: color .2s ease-in;
+                -webkit-transition: color .2s ease-in;
+
+                &:hover {
+                    color: @redBrown;
+                }
+            }
+
+            &.profile {
+                background-color: @lightBrown;
+                -moz-transition: color .2s ease-in;
+                -o-transition: color .2s ease-in;
+                -webkit-transition: color .2s ease-in;
+
+                &:hover {
+                    color: @redBrown;
+                }
+            }
+        }
+
+        &.beer {
+            min-height: 305px;
+
+            .card-title {
+                padding: 20px 20px 10px 20px;
+
+                .title {
+                    color: #f18e29;
+                    display: block;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                .sub-title {
+                    color: #d2482e;
+                    display: block;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.comment-section{
+    background:@brown;
+    padding:40px 0;
+}
+
+.comments{
+    padding: 0 15px;
+}
+
+//DESKTOP STYLES
+@media screen and (min-width:769px) {
+
+    .contact-us-button {
+        background-color: #903030;
+        border: 0px solid #fff;
+        border-top: 1px solid @redBrown;
+        border-right: 1px solid @redBrown;
+        border-bottom: 1px solid @redBrown;
+        color: #ffffff;
+        display:inline-block;
+        font-size: 16px;
+        float:right;
+        line-height: 18px;
+        margin: 0 10px 0 0;
+        border-radius: 0px 0px 5px 5px;
+        padding: 8px 20px 10px 20px;
+        width:200px;
+        &:hover, &:active {
+            -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+            -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 20px #550808;
+            outline: 0;
+        }
+    }
+
+    .select-brewery {
+        margin-top: 38px;
+        text-align: right;
+    }
+
+    .all-brewery-button {
+        margin: 30px 0;
+    }
+
+    .brewery-select {
+        margin: 30px auto;
+    }
+
+    .brewery .card .card-banner .title {
+        color: #fff;
+        display: block;
+        font-family: 'double_porter_3';
+        font-size: 24px;
+        left: 135px;
+        line-height: 24px;
+        position: absolute;
+        text-align:left;
+        top: 45px;
+        z-index: 1001;
+    }
+    .brewery .card .icon{
+        background-color: white;
+        border-radius: 50px;
+        left: 20px;
+        overflow: hidden;
+        position: absolute;
+        top: 20px;
+        z-index: 1000;
+    }
+
+    .brewery .card .card-banner .title .sub-title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .brewery-summary {
+        margin: 25px 0 125px 0;
+    }
+
+    .brewery-banner {
+        margin-bottom: 40px;
+    }
+
+    .brewery-summary {
+        margin: 2em 15px;
+    }
+
+    .gallery{
+        margin: 20px 0 120px 0;
+        display: block;
+    }
+    .gallery-head{
+        margin-top:40px
+    }
+
+    .comment-section{
+        background:@brown;
+        padding:80px 0;
+    }
+}
+
+
+
+
+
+
+
+

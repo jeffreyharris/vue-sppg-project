@@ -1,0 +1,167 @@
+@import 'fonts.less';
+
+#app {
+    overflow: hidden;
+}
+
+.header {
+    .logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 546px;
+        margin: 40px auto;
+    }
+}
+
+.navigation {
+    background-color: @paleAle;
+    border-bottom: 1px solid @redBrown;
+    border-top: 1px solid @redBrown;
+    font-family: 'double_porter_3';
+    margin: 0;
+    padding: 0;
+
+    select {
+        border-top: 1px solid @redBrown;
+        border-left: 1px solid @redBrown;
+        border-right: 1px solid @redBrown;
+        border-bottom: 1px solid @redBrown;
+        color: #903030;
+    }
+
+    .select-brewery {
+        color: #903030;
+    }
+
+    .navbar-collapse {
+        box-shadow: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar .navbar-toggle {
+        background-color: @paleAle;
+        border-color: @redBrown;
+        color: @redBrown;
+    }
+
+    .navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
+        background-color: transparent;
+    }
+
+    .navbar .navbar-toggle .icon-bar {
+        background-color: @redBrown;
+    }
+
+    .navbar {
+        background-color: transparent;
+        border-color: transparent;
+        margin-bottom: 0;
+        text-align: center !important;
+    }
+
+    .navbar .navbar-collapse, .navbar .navbar-form {
+        border: none;
+    }
+
+    .navbar-nav {
+        border-bottom: none;
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center !important;
+
+
+        ul {
+            margin: 0;
+            text-align: center !important;
+
+            li {
+                display: inline-block;
+                margin-right: 20px;
+                padding: 0;
+                text-align: center;
+
+                a,
+                a:hover,
+                a:focus {
+                    background-color: @paleAle;
+                    border: none;
+                    border-radius: 0;
+                    color: @redBrown;
+                    cursor: pointer;
+                    font-size: 24px;
+                    margin-right: 0;
+                    padding: 0;
+                    text-decoration: none;
+                    -moz-transition: color .2s ease-in;
+                    -o-transition: color .2s ease-in;
+                    -webkit-transition: color .2s ease-in;
+
+                    &:hover {
+                        color: @lightBrown;
+                        text-decoration: none;
+                    }
+                }
+
+                &.active {
+                    a {
+                        color: @redBrown;
+                        border: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// FOOTER
+.footer {
+    color: white;
+    background: @redBrown;
+    padding: 50px 20px;
+    text-align: center;
+
+    .footer-sppg-logo {
+        display: block;
+        margin: 0 auto 15px auto;
+        width: 225px;
+    }
+
+    .un-logo {
+        width: 100px;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 10px auto;
+        max-width: 600px;
+
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+        margin: 0;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+}
+
+
+@media (min-width: 992px) {
+    #navbarNavAltMarkup {
+        display: block !important;
+        display: block !important;
+        display: block !important;
+    }
+}

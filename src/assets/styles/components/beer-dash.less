@@ -1,0 +1,203 @@
+@import 'fonts.less';
+
+.beer-select {
+  margin: 10px 15px 10px 0 !important;
+  border: 1px solid #A86048 !important;
+  color: #A86048 !important;
+}
+
+.centered{
+  text-align:center;
+}
+
+.beer-dash-section {
+  background-color: @lightBrown;
+}
+
+.beer-list{
+  margin-top:40px;
+}
+
+.beer-list .head-line {
+  border-top: 1px solid #A86048;
+  border-bottom: 1px solid #A86048;
+}
+
+.untap-logo {
+  max-width: 166px;
+  margin-top: 20px;
+  margin-bottom:40px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  display: block;
+}
+
+.beer-card {
+  background-color: white;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 20px 20px 20px 20px;
+
+  &.reviewed-beer-card{
+    padding: 20px 20px 0px 20px;
+  }
+  .name {
+    color: @redBrown;
+    display: block;
+    font-family: 'double_porter_p_5';
+    font-size: 42px;
+    line-height: 42px;
+    margin: 0;
+    padding-left: 0;
+    text-align:center;
+  }
+
+  .label {
+    img {
+      display: block;
+      margin: 10px auto; 
+      width: 100px;
+    }
+  }
+
+  .stats {
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .type {
+      display: block;
+      text-align:center;
+    }
+
+    .number {
+      background-color: @lightBrown;
+      border-radius: 5px;
+      color: white;
+      font-family: 'double_porter_p_5';
+      font-size: 24px;
+      display: block;
+      line-height: 34px;
+      margin-right: 0;
+      margin-top: 10px;
+      padding: 0 5px 0 5px;
+      text-align: center;
+      &.bottom-number{
+        margin-bottom:20px;
+      }
+      a {
+        color: @paleAle;
+        text-decoration: none;
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.reviewed-beer-card{
+  .name{
+    margin:10px 0 20px 0;
+  }
+ .stats{ 
+  .number {
+    margin-right: 0;
+  }
+}
+}
+
+.reviewed-beers-row{
+  padding-bottom:40px;
+}
+
+@media screen and (min-width:769px) {
+  .untap-logo {
+    max-width: 166px;
+    margin-bottom:80px;
+    margin-top: 20px;
+    float: right;
+  }
+  .beer-list{
+    margin-top:80px;
+  }
+  .beer-card {
+    padding: 25px 30px;
+    
+    .name {
+      font-size: 38px;
+      line-height: 38px;
+      margin: -8px 0 5px 0;
+    }
+    .number {
+      margin-right:10px;
+      display: inline-block;
+    }
+    &.reviewed-beer-card {
+      padding: 40px;
+    }
+  }
+  .reviewed-beers-row{
+    padding-bottom:80px;
+  }
+  .reviewed-beer-card .stats .number {
+    display:inline-block;
+    margin-right:10px;
+    padding: 0 10px;
+  }
+}
+
+#logo2 {
+  width: 150px !important;
+  height: 150px !important;
+  position: relative;
+  margin-top: -100px;
+}
+#banner {
+  margin: 50px auto;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  z-index: -1;
+  /*margin-bottom: -50px;*/
+}
+#banner .fill {
+  animation-name: fillAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.2, .6, .8, .4);
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+#banner #waveShape {
+  animation-name: waveAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  width: 300px;
+  height: 250px;
+  fill: #f49f44;
+}
+@keyframes fillAction {
+  0% {
+    transform: translate(0, 150px);
+  }
+  100% {
+    transform: translate(0, -5px);
+  }
+}
+@keyframes waveAction {
+  0% {
+    transform: translate(-150px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

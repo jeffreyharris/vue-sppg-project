@@ -1,0 +1,417 @@
+@font-face {
+  font-family: 'double_porter_1';
+  src: url('/fonts/double_porter_1-webfont.woff2') format('woff2'), url('/fonts/double_porter_1-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_2';
+  src: url('/fonts/double_porter_2-webfont.woff2') format('woff2'), url('/fonts/double_porter_2-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_5';
+  src: url('/fonts/double_porter_5-webfont.woff2') format('woff2'), url('/fonts/double_porter_5-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_6';
+  src: url('/fonts/double_porter_6-webfont.woff2') format('woff2'), url('/fonts/double_porter_6-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_3';
+  src: url('/fonts/double_porter_3-webfont.woff2') format('woff2'), url('/fonts/double_porter_3-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'double_porter_p_5';
+  src: url('/fonts/double_porter_p_5-webfont.woff2') format('woff2'), url('/fonts/double_porter_p_5-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: url('/img/bg/dust_scratches.png');
+  margin: 0;
+  /* Double Diagonal line */
+}
+body img {
+  width: 100%;
+}
+body h1 {
+  font-family: 'double_porter_3';
+  color: #d2482e;
+  display: block;
+  font-size: 36px;
+  line-height: 33px;
+  margin-bottom: 8px;
+  margin-top: 35px;
+  text-align: center;
+}
+body .logo h1 {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 20px 10px 10px 10px;
+}
+body h2 {
+  color: #fff;
+  font-family: 'double_porter_1';
+  font-size: 36px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+body h3 {
+  color: #783030;
+  display: block;
+  font-family: 'double_porter_p_5';
+  font-size: 30px;
+  line-height: 1;
+  margin-top: 20px;
+  text-align: center;
+}
+body h3.subhead {
+  border-top: 1px solid #783030;
+  font-size: 38px;
+  line-height: 40px;
+  padding-top: 10px;
+  margin: 10px 30px 18px 30px;
+}
+body h5 {
+  color: #783030;
+  display: block;
+  font-family: 'double_porter_p_5';
+  font-size: 42px;
+  line-height: 1;
+  margin-top: 20px;
+  text-align: center;
+}
+body h5.subhead {
+  border-top: 1px solid #783030;
+  font-size: 38px;
+  line-height: 40px;
+  margin: 10px 30px 18px 30px;
+}
+body p {
+  margin: 10px 0;
+}
+body .text-center {
+  text-align: center;
+}
+body .head-line {
+  border-bottom: 1px solid #2C8FB2;
+  border-top: 1px solid #2C8FB2;
+  height: 5px;
+  margin-top: 3px;
+  width: 100%;
+}
+body .head-line.bottom {
+  margin-top: 40px;
+}
+body #reactions .text-bold {
+  font-family: 'double_porter_3' !important;
+  font-size: 48px;
+  line-height: 1;
+}
+body .font-load {
+  font-family: 'double_porter_5';
+  display: none;
+}
+body .btn-default {
+  background-color: #F49F44;
+  background-image: url('/img/bubbles.png');
+  border-color: #904830;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: right 60px;
+  color: white;
+  font-family: 'double_porter_p_5';
+  font-size: 32px;
+  margin-top: 20px;
+  padding: 10px 30px;
+  position: relative;
+  -moz-transition: background-position 1.5s ease-in;
+  -o-transition: background-position 1.5s ease-in;
+  -webkit-transition: background-position 1.5s ease-in;
+  width: fit-content;
+}
+body .btn-default:hover {
+  background-color: #F49F44;
+  background-position: right -50px;
+  border-color: #904830;
+  color: white;
+}
+body .pills {
+  background-color: #783030;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-family: 'double_porter_p_5';
+  font-size: 32px;
+  margin: 5px;
+  padding: 10px 30px;
+  position: relative;
+}
+body *:after,
+body *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body .beer-list svg {
+  display: block;
+}
+body .beer-color-icon {
+  display: inline;
+  width: 40px;
+}
+body .diagonal-container {
+  overflow: hidden;
+}
+body section {
+  position: relative;
+  padding: 10em 10%;
+  background: #A86048;
+}
+body section.brewery-details-section {
+  background: url('/img/bg/dust_scratches.png');
+}
+body section::before,
+body section::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+body .ss-style-doublediagonal::before,
+body .ss-style-doublediagonal::after {
+  display: none;
+}
+body .ss-style-doublediagonal {
+  z-index: 1;
+  padding-top: 0 !important;
+  padding-bottom: 2em;
+  padding-left: 0;
+  padding-right: 0;
+  background: #F49F44;
+}
+body .ss-style-doublediagonal.second-section {
+  background-color: white;
+}
+body .ss-style-doublediagonal::before,
+body .ss-style-doublediagonal::after {
+  top: 0;
+  left: -25%;
+  z-index: -1;
+  width: 150%;
+  height: 75%;
+  background: inherit;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+body .ss-style-doublediagonal::before {
+  height: 50%;
+  background: #A86048;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+}
+body .iframe-container {
+  overflow: hidden;
+  min-height: 450px;
+  padding-top: 56.25%;
+  position: relative;
+}
+body .iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+body #disqus_thread {
+  max-width: 800px;
+  margin: 0 auto;
+}
+body .twitter-timeline,
+body .fb-page {
+  display: block !important;
+  margin: 10px auto 10px auto !important;
+  max-width: 500px !important;
+}
+@media screen and (min-width: 575px) {
+  body body .ss-style-doublediagonal::before,
+  body body .ss-style-doublediagonal::after {
+    display: block;
+  }
+  body body .ss-style-doublediagonal {
+    padding-top: 6em;
+  }
+  body body h3 {
+    font-size: 68px;
+    text-align: left;
+    border-top: none;
+    margin: 10px 30px 18px 30px;
+  }
+}
+.beer-select {
+  margin: 10px 15px 10px 0 !important;
+  border: 1px solid #A86048 !important;
+  color: #A86048 !important;
+}
+.centered {
+  text-align: center;
+}
+.beer-dash-section {
+  background-color: #A86048;
+}
+.beer-list {
+  margin-top: 50px;
+}
+.beer-list .head-line {
+  border-top: 1px solid #A86048;
+  border-bottom: 1px solid #A86048;
+}
+.untap-logo {
+  max-width: 166px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  display: block;
+}
+.beer-card {
+  background-color: white;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 20px 20px 20px 20px;
+}
+.beer-card.reviewed-beer-card {
+  padding: 20px 20px 0px 20px;
+}
+.beer-card .name {
+  color: #903030;
+  display: block;
+  font-family: 'double_porter_p_5';
+  font-size: 42px;
+  line-height: 42px;
+  margin: 20px 0 0 0;
+  padding-left: 0;
+}
+.beer-card .label img {
+  margin-top: 15px;
+  width: 100px;
+}
+.beer-card .stats p {
+  font-size: 16px;
+  margin: 0;
+}
+.beer-card .stats .type {
+  display: block;
+}
+.beer-card .stats .number {
+  background-color: #A86048;
+  border-radius: 5px;
+  color: white;
+  font-family: 'double_porter_p_5';
+  font-size: 24px;
+  display: block;
+  line-height: 34px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 0 5px 0 5px;
+  text-align: center;
+}
+.beer-card .stats .number.bottom-number {
+  margin-bottom: 20px;
+}
+.beer-card .stats .number a {
+  color: #F49F44;
+  text-decoration: none;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+.beer-card .stats .number a:hover {
+  color: white;
+}
+.reviewed-beer-card .stats .number {
+  margin-right: 0;
+}
+@media screen and (min-width: 769px) {
+  .untap-logo {
+    max-width: 166px;
+    margin-top: 20px;
+    float: right;
+  }
+  .beer-list {
+    margin-top: 20px;
+  }
+  .beer-card {
+    padding: 35px;
+  }
+  .beer-card.reviewed-beer-card {
+    padding: 40px;
+  }
+  .beer-card .name {
+    font-size: 48px;
+    line-height: 48px;
+    margin: -8px 0 5px 0;
+  }
+}
+#logo2 {
+  width: 150px !important;
+  height: 150px !important;
+  position: relative;
+  margin-top: -100px;
+}
+#banner {
+  margin: 50px auto;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  z-index: -1;
+  /*margin-bottom: -50px;*/
+}
+#banner .fill {
+  animation-name: fillAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.2, 0.6, 0.8, 0.4);
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+#banner #waveShape {
+  animation-name: waveAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  width: 300px;
+  height: 250px;
+  fill: #f49f44;
+}
+@keyframes fillAction {
+  0% {
+    transform: translate(0, 150px);
+  }
+  100% {
+    transform: translate(0, -5px);
+  }
+}
+@keyframes waveAction {
+  0% {
+    transform: translate(-150px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

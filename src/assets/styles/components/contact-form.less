@@ -1,0 +1,118 @@
+
+@import 'fonts.less';
+
+
+
+.contact-form .error{
+  border-color:red !important;
+}
+
+.error-message {
+  color:red;
+  display:none;
+  font-size:11px;
+}
+
+#exampleModal{
+  background: url('/img/bg/dust_scratches.png');
+}
+
+.modal-body{
+  padding: 0 1rem 1rem 1rem !important;
+}
+
+.modal-header{
+  padding: 1rem 1rem 0 1rem !important;
+}
+
+.modal-content{
+ border-top: 1px solid #903030 !important;
+ border-left: 1px solid #903030  !important;
+ border-right: 1px solid #903030 !important;
+ border-bottom: 1px solid #903030 !important;
+ border-radius: 5px;
+}
+
+.modal-content p{
+  margin-left:5px;
+}
+
+.modal-header, .modal-footer{
+  border:none !important;
+}
+
+.modal-title{
+  font-size:42px;
+  line-height:42px;
+}
+
+input, textarea{
+  margin-bottom:20px !important;
+  border-top: 1px solid #903030 !important;
+  border-left: 1px solid #903030  !important;
+  border-right: 1px solid #903030 !important;
+  border-bottom: 1px solid #903030 !important;
+
+}
+
+.custom-checkbox{
+  margin-bottom:10px;
+  margin-left:5px
+}
+
+.custom-checkbox:last-child{
+ margin-bottom:20px;
+}
+
+.contact-submit-button {
+  background-color: #903030;
+  border: 0px solid #fff;
+  border-top: 1px solid @redBrown;
+  border-right: 1px solid @redBrown;
+  border-bottom: 1px solid @redBrown;
+  color: #ffffff;
+  display:block;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0 10px 0 5px;
+  border-radius: 5px;
+  padding: 8px 20px 10px 20px;
+
+  &.end{
+    margin-top:20px;
+  }
+  &:hover, &:active {
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 20px #550808;
+    outline: 0;
+  }
+}
+
+.form-error-message{
+  color:red;
+}
+
+.form-errors {
+  li{
+    color:red;
+  }
+}
+
+.form-success{
+  background-color: green;
+  color:white;
+  display:none;
+  text-align:center;
+  width:100%;
+}
+
+@media screen and (min-width:768px){
+  .contact-form input, .contact-form textarea{
+  margin-bottom:0px !important;
+}
+
+.contact-form .form-row{
+  margin-bottom:30px !important;
+}
+}
