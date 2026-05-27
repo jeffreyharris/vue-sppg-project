@@ -7,7 +7,7 @@
 <script>
 import firebase from 'firebase'
 
-const GOOGLE_API_KEY = process.env.VUE_APP_GOOGLE_API_KEY || window.VUE_APP_GOOGLE_API_KEY || 'AIzaSyCuRs-boFjzLM89rjg8b54r-sqxVLSmAHs'
+const GOOGLE_API_KEY = process.env.VUE_APP_GOOGLE_API_KEY
 
 const firebaseConfig = {
   apiKey: GOOGLE_API_KEY,
