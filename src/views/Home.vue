@@ -13,7 +13,7 @@
       </li>
     </ul>
 
-    <div class="tab-content">
+    <div class="tab-content master-tabs-content">
       <div class="tab-pane fade" :class="{ 'show active': activeTab === 'map' }" role="tabpanel">
         <BreweryMap @brewery-selected="onBrewerySelected" />
       </div>

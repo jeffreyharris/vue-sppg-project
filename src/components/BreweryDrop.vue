@@ -120,24 +120,42 @@
                     </section>
 
                     <section class="beer-list">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#all"><h3 class="text-center tab-h3"> All Beers on Tap</h3></a>
-                            </li>           
-                            <li class="nav-item reviewed-beers-tab">
-                                <a class="nav-link" data-toggle="tab" href="#had"><h3 class="text-center tab-h3">Beers We've <br class="d-block d-sm-none" />Had</h3></a>
-                            </li>
-                        </ul>
+  <ul class="nav nav-tabs">
+    <li 
+      class="nav-item"
+      :class="{ 'w-100': !reviewedBeers || !reviewedBeers.length }"
+    >
+      <a class="nav-link active" data-toggle="tab" href="#all">
+        <h3 class="text-center tab-h3">All Beers on Tap</h3>
+      </a>
+    </li>           
 
-                        <div class="tab-content">
-                            <div class="tab-pane container active" id="all">
-                                <beers :stringProp="chosenBar.untappedid"></beers>
-                            </div>
-                            <div class="tab-pane container" id="had">
-                                <reviewedbeers :nameProp="chosenBar.name"></reviewedbeers>
-                            </div>
-                        </div>
-                    </section>
+    <li 
+      v-if="reviewedBeers && reviewedBeers.length"
+      class="nav-item reviewed-beers-tab"
+    >
+      <a class="nav-link" data-toggle="tab" href="#had">
+        <h3 class="text-center tab-h3">
+          Beers We've <br class="d-block d-sm-none" />Had
+        </h3>
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane container active" id="all">
+      <beers :stringProp="chosenBar.untappedid"></beers>
+    </div>
+
+    <div 
+      v-if="reviewedBeers && reviewedBeers.length"
+      class="tab-pane container"
+      id="had"
+    >
+      <reviewedbeers :nameProp="chosenBar.name"></reviewedbeers>
+    </div>
+  </div>
+</section>
                     <section class="comment-section">
                         <div class="row">
                         <div class="container">
@@ -174,7 +192,7 @@
         import firebase from 'firebase';
         import 'firebase/firestore';
 
-        const GOOGLE_API_KEY = process.env.VUE_APP_GOOGLE_API_KEY || window.VUE_APP_GOOGLE_API_KEY || 'AIzaSyCuRs-boFjzLM89rjg8b54r-sqxVLSmAHs'
+        const GOOGLE_API_KEY = process.env.VUE_APP_GOOGLE_API_KEY
 
         // firebase init goes here
         const config = {
