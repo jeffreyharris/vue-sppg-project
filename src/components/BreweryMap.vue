@@ -21,13 +21,10 @@ const firebaseConfig = {
 }
 
 const pintGuideMapStyles = [
-  // Base land/background - soft neutral
   {
     elementType: 'geometry',
     stylers: [{ color: '#f6efe6' }]
   },
-
-  // Global labels
   {
     elementType: 'labels.text.fill',
     stylers: [{ color: '#5f5145' }]
@@ -36,8 +33,6 @@ const pintGuideMapStyles = [
     elementType: 'labels.text.stroke',
     stylers: [{ color: '#f6efe6' }]
   },
-
-  // Water - darker blue
   {
     featureType: 'water',
     elementType: 'geometry',
@@ -53,8 +48,6 @@ const pintGuideMapStyles = [
     elementType: 'labels.text.stroke',
     stylers: [{ color: '#1d5f7a' }]
   },
-
-  // Regular roads - lighter and more muted so markers pop
   {
     featureType: 'road',
     elementType: 'geometry',
@@ -75,8 +68,6 @@ const pintGuideMapStyles = [
     elementType: 'labels.text.stroke',
     stylers: [{ color: '#f6efe6' }]
   },
-
-  // Highways - still visible, but toned down a bit
   {
     featureType: 'road.highway',
     elementType: 'geometry',
@@ -97,8 +88,6 @@ const pintGuideMapStyles = [
     elementType: 'labels.text.stroke',
     stylers: [{ color: '#f6efe6' }]
   },
-
-  // Parks - very muted, almost blending in
   {
     featureType: 'poi.park',
     elementType: 'geometry',
@@ -114,8 +103,6 @@ const pintGuideMapStyles = [
     elementType: 'labels.text.stroke',
     stylers: [{ color: '#f6efe6' }]
   },
-
-  // General POI background - very neutral
   {
     featureType: 'poi',
     elementType: 'geometry',
@@ -131,8 +118,6 @@ const pintGuideMapStyles = [
     elementType: 'labels.text.stroke',
     stylers: [{ color: '#f6efe6' }]
   },
-
-  // Hide clutter so custom markers stand out
   {
     featureType: 'poi.business',
     stylers: [{ visibility: 'off' }]
@@ -161,15 +146,11 @@ const pintGuideMapStyles = [
     featureType: 'transit.station.airport',
     stylers: [{ visibility: 'off' }]
   },
-
-  // Administrative boundaries
   {
     featureType: 'administrative',
     elementType: 'geometry.stroke',
     stylers: [{ color: '#cbb7a0' }]
   },
-
-  // City names - warm brown
   {
     featureType: 'administrative.locality',
     elementType: 'labels.text.fill',
@@ -180,15 +161,11 @@ const pintGuideMapStyles = [
     elementType: 'labels.text.stroke',
     stylers: [{ color: '#f6efe6' }]
   },
-
-  // Neighborhood / smaller admin labels
   {
     featureType: 'administrative.neighborhood',
     elementType: 'labels.text.fill',
     stylers: [{ color: '#8b6a52' }]
   },
-
-  // Landscape
   {
     featureType: 'landscape',
     elementType: 'geometry',
@@ -299,67 +276,85 @@ export default {
         const bounds = new google.maps.LatLngBounds()
         const infoWindow = new google.maps.InfoWindow()
 
-        // Optional: close the popup when clicking elsewhere on the map
         map.addListener('click', () => {
           infoWindow.close()
         })
 
-        for (const brewery of items) {
-          const addressParts = [
-            brewery.address,
-            brewery.city,
-            'FL',
-            brewery.zip
-          ].filter(Boolean)
+        const markerDataResults = await Promise.allSettled(
+          items.map(async brewery => {
+            const addressParts = [
+              brewery.address,
+              brewery.city,
+              'FL',
+              brewery.zip
+            ].filter(Boolean)
 
-          const address = addressParts.join(', ')
+            const address = addressParts.join(', ')
 
-          if (!address) continue
+            if (!address) {
+              return null
+            }
 
-          try {
             const results = await this.geocodeAddress(google, address)
 
-            if (!results.length) continue
+            if (!results.length) {
+              return null
+            }
 
-            const location = results[0].geometry.location
+            return {
+              brewery,
+              address,
+              location: results[0].geometry.location
+            }
+          })
+        )
 
-            const marker = new google.maps.Marker({
-              map,
-              position: location,
-              title: brewery.name,
-              icon: {
-                url: `${process.env.BASE_URL || '/'}map-markers/marker-2.svg`,
-                scaledSize: new google.maps.Size(35, 48),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(17, 48)
-              }
-            })
+        const markerData = markerDataResults
+          .filter(result => result.status === 'fulfilled' && result.value)
+          .map(result => result.value)
 
-            marker.addListener('click', () => {
-              infoWindow.setContent(this.getInfoWindowContent(brewery, address))
-              infoWindow.open(map, marker)
-
-              google.maps.event.addListenerOnce(infoWindow, 'domready', () => {
-                const detailButton = document.querySelector('.brewery-info-button')
-
-                if (detailButton) {
-                  detailButton.addEventListener('click', () => {
-                    this.$emit('brewery-selected', brewery.untappedid)
-                    infoWindow.close()
-                  })
-                }
-              })
-            })
-
-            bounds.extend(location)
-          } catch (geocodeError) {
-            console.warn('Geocode failed for', address, geocodeError)
-          }
-        }
+        markerData.forEach(({ location }) => {
+          bounds.extend(location)
+        })
 
         if (!bounds.isEmpty()) {
           map.fitBounds(bounds)
+
+          await new Promise(resolve => {
+            google.maps.event.addListenerOnce(map, 'idle', resolve)
+          })
         }
+
+        markerData.forEach(({ brewery, address, location }) => {
+          const marker = new google.maps.Marker({
+            map,
+            position: location,
+            title: brewery.name,
+            animation: google.maps.Animation.DROP,
+            icon: {
+              url: `${process.env.BASE_URL || '/'}map-markers/marker-2.svg`,
+              scaledSize: new google.maps.Size(35, 48),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 48)
+            }
+          })
+
+          marker.addListener('click', () => {
+            infoWindow.setContent(this.getInfoWindowContent(brewery, address))
+            infoWindow.open(map, marker)
+
+            google.maps.event.addListenerOnce(infoWindow, 'domready', () => {
+              const detailButton = document.querySelector('.brewery-info-button')
+
+              if (detailButton) {
+                detailButton.addEventListener('click', () => {
+                  this.$emit('brewery-selected', brewery.untappedid)
+                  infoWindow.close()
+                })
+              }
+            })
+          })
+        })
 
         this.mapInitialized = true
       } catch (initError) {
@@ -534,7 +529,7 @@ export default {
   height: 100px;
   width: 100px;
   margin: 0 auto;
-  border-radius:50%;
+  border-radius: 50%;
   padding: 16px;
   background: #ffffff;
   border-bottom: 4px solid #f79a3b;
