@@ -4,6 +4,7 @@
                     <button type="button" class="contact-us-button" data-toggle="modal" data-target="#exampleModal">
                         Contact Us
                     </button>
+                    <Contact />
            
     <div class="header">
       <div class="container">
@@ -54,7 +55,20 @@
 
 </template>
 
+<script>
+import Contact from '@/components/Contact.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Contact
+  }
+}
+</script>
+
 <style lang="less" src="@/assets/styles/components/header-footer.less">
 
 </style>
+<style lang="less" src="@/assets/styles/components/contact-form.less">
 
+</style>

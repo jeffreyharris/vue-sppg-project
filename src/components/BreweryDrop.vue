@@ -169,10 +169,6 @@
                 </div>
 
             </transition>
-
-            <div>
-                <contact></contact>
-            </div>
         </div>
     </template>
 
@@ -187,7 +183,6 @@
         import ReviewedBeerDash from '@/components/ReviewedBeerDash.vue';
         import PhotoDash from '@/components/PhotoDash.vue';
         //import BreweryTwitter from '@/components/BreweryTwitter.vue';
-        import Contact from '@/components/Contact.vue';
 
         import firebase from 'firebase';
         import 'firebase/firestore';
@@ -247,8 +242,7 @@
         'beers': BeerDash,
         'reviewedbeers': ReviewedBeerDash,
         //'twitterfeed': BreweryTwitter,
-        'photos': PhotoDash,
-        'contact': Contact
+        'photos': PhotoDash
     },
     computed: {
         chosenYet() {
@@ -350,8 +344,6 @@
 </script>
 
 <style lang="less" src="@/assets/styles/components/brewery-dash.less">
-</style>
-<style lang="less" src="@/assets/styles/components/contact-form.less">
 </style>
 <style lang="less" src="@/assets/styles/components/slick.less">
 </style>
