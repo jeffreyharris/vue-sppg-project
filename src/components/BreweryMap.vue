@@ -531,7 +531,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 96px;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border-radius:50%;
   padding: 16px;
   background: #ffffff;
   border-bottom: 4px solid #f79a3b;
